@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int base, exponent, result = 1;
+
+    printf("Enter the base number: ");
+    scanf("%d", &base);
+
+    printf("Enter the exponent: ");
+    scanf("%d", &exponent);
+
+    if (base < 0 || exponent < 0) {
+        printf("Invalid input. Base must be non-negative and exponent must be non-negative.\n");
+    } else {
+        while (exponent > 0) {
+            result *= base;
+            exponent--;
+        }
+
+        printf("%d raised to the power of %d is %d\n", base, exponent, result);
+    }
+
+    return 0;
+}
